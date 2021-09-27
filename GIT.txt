@@ -1,0 +1,26 @@
+git init                    - creates new local repository 
+git status                  - current status of the commits
+git ls-files                - overview of all files in the repository
+git add                     - adding commit to the staging area
+git commit -m "message"     - commiting changes in the repository
+git log                     - log of the commits that were made
+git branch                  - displaying available branches
+git branch [branch name]    - creates branch 
+git switch [branch name]    - switches between branches
+git checkout --             - reverts to the last commit
+git checkout [log id]       - goes to that commit
+git checkout master         - goes to the head of the master branch
+git merge [branch name]     - joins branch to the current one
+git restore .(or file name) - reverts unstaged changes
+git restore --staged .(or file name) - reverts staged changes
+git reset HEAD~1            - reverts to the commit one log back
+git branch -D [branch name] - deletes branch
+git branch -a               - list of all branches
+git branch -r               - all remote branches
+git branch -vv              - lists local tracking branches and their remotes
+git branch --track [branchname] origin/[branchname] - creates local tracking branch 
+git clone [link from github] - clones repository from Github to the computer 
+git push                    - pushes changes from computer to GitHub
+git pull                    - pulls changes from Github to computer
+git push origin [branchname] - pushes from untracked branch to github
+git push -u origin [branchname] - pushes to github and makes the local branch tracking

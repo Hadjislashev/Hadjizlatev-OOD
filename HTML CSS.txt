@@ -1,0 +1,136 @@
+1 rem = 16px.(best for font sizes).
+1 em  = the height of the parent element.
+10VW  = 10% view width 
+10VH  = 10% view height
+
+px     - for borders and shadows
+rem/em - for font size, pading, margins
+%      - for layouts, widths and heights
+vh/vw  - for larger layout concerns 
+
+
+Box Shadow
+box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+Hover
+a:hover { color: red; }
+
+
+Relative position
+p { position: relative; bottom: 10px; }
+
+
+text-align за блок елементи.
+
+
+FLEX-BOX!!!
+(display: flex;)
+
+1. Container properties
+  - flex direction:(specifies main axis)row, row-reverse, column, column-reverse
+
+  - justify content:(for tghe main axis) space between, space around, center
+
+  - flex-wrap: wrap(wrap-reverse)-wraps content on a new row(column)
+
+  - align-items:(for the cross axis) flex-start, flex-end, center, stretch, baseline.
+
+  - align-content(definest space deistribution BETWEEN ROWS(cross axis))flex-start, flex-end, center, stretch.
+
+
+
+
+2. Flex Item properties
+  - order: 1,2,3,....
+
+  - flex( flex-grow, flex-shrink, flex-basis)
+	-flex-basis(controls the size on the main axis)(% or px, rem, em,)
+
+  - flex-grow(spreading unused space between items)
+
+  - flex-shrink
+
+  - align-self - Aligns individual items in the flexbox:flex-start, flex-end, center, stretch
+
+
+
+
+GRID!!!!
+-----------------------------
+display: grid;
+(grid-auto-flow: columns(rows))
+
+  grid-template-column: 1fr 1fr 1fr; or   grid-template-column: repeat1(3,1fr);
+  grid-template-row: 50px 50px;      or   grid-template-row: repeat(2, 50px);
+
+BEST RESPONSIVE:
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)).
+
+
+short declaration:
+  grid-template: (rows) /  (columns); grid-template: repeat(3, 1fr) / repeat(2, 50px); 
+
+
+For the elements in the grid:
+  grid-column-start: 1;
+  grid-column-end: -1;
+
+or short:  grid-column: 1 / -1 ( from the begining to the end of the column)
+
+Alternative way to position elements in the container
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-gap: 5px;
+  grid-template-areas:
+	"m h h h h h h h h h h h"
+	"m c c c c c c c c c c c"
+	"m f f f f f f f f f f f";
+ }
+
+.header{
+    grid-area: h;
+ }
+
+.menu{
+    grid-area: m;
+ }
+
+.content{
+    grid-area: c;
+ }
+.footer{
+    grid-area: f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
